@@ -14,36 +14,29 @@
     <header>
         <nav class="navbar bg-body-transparent">
             <div class="container-fluid pLogo">
-                <a class="navbar-brand" href="#">
-                    <img src="assets/img/pngwing.com (1).png" width="155" height="75" class="d-flex align-text-center">
+                <a class="navbar-brand" href="index.html" class="d-flex justify-content-center">
+                    <img src="assets/img/pngwing.com (1).png" width="155" height="75">
                 </a>
-                <form class="d-flex" role="search">
-                    <input class="input-group border border-1 rounded-start" placeholder=" ¡Busca tu Pokemon!">
-                    <button class="btn border border-1 rounded-0" style="background-color:#FFFFD5;" type="submit">
-                        <img src="assets/img/pngwing.com (2).png" width="25" height="25">
-                    </button>
-                </form>
             </div>
-            <ul class="nav-list mt-3">
-                <li class="nav-item"><button class="btn btn-header" id="verTodos">Ver Todos</button></li>
-                <li class="nav-item"><button class="btn btn-header normal" id="normal">Normal</button></li>
-                <li class="nav-item"><button class="btn btn-header fuego" id="fuego">Fuego</button></li>
-                <li class="nav-item"><button class="btn btn-header agua" id="agua">Agua</button></li>
-                <li class="nav-item"><button class="btn btn-header planta" id="planta">Planta</button></li>
-                <li class="nav-item"><button class="btn btn-header electrico" id="electrico">Eléctrico</button></li>
-                <li class="nav-item"><button class="btn btn-header hielo" id="hielo">Hielo</button></li>
-                <li class="nav-item"><button class="btn btn-header lucha" id="lucha">Lucha</button></li>
-                <li class="nav-item"><button class="btn btn-header veneno" id="veneno">Veneno</button></li>
-                <li class="nav-item"><button class="btn btn-header tierra" id="tierra">Tierra</button></li>
-                <li class="nav-item"><button class="btn btn-header volador" id="volador">Volador</button></li>
-                <li class="nav-item"><button class="btn btn-header psiquico" id="psiquico">Psíquico</button></li>
-                <li class="nav-item"><button class="btn btn-header bicho" id="bicho">Bicho</button></li>
-                <li class="nav-item"><button class="btn btn-header roca" id="roca">Roca</button></li>
-                <li class="nav-item"><button class="btn btn-header fantasma" id="fantasma">Fantasma</button></li>
-                <li class="nav-item"><button class="btn btn-header siniestro" id="siniestro">Siniestro</button></li>
-                <li class="nav-item"><button class="btn btn-header dragon" id="dragon">Dragón</button></li>
-                <li class="nav-item"><button class="btn btn-header acero" id="acero">Acero</button></li>
-                <li class="nav-item"><button class="btn btn-header hada" id="hada">Hada</button></li>
+            <ul class="nav-list mt-3" id="listaTipos">
+                <li class="nav-item"><button class="btn btn-header normal" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/normal')" id="normal">Normal</button></li>
+                <li class="nav-item"><button class="btn btn-header fuego" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/fire')" id="normal">Fuego</button></li>
+                <li class="nav-item"><button class="btn btn-header agua" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/water')" id="agua">Agua</button></li>
+                <li class="nav-item"><button class="btn btn-header planta" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/grass')" id="planta">Planta</button></li>
+                <li class="nav-item"><button class="btn btn-header electrico" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/electric')" id="electrico">Eléctrico</button></li>
+                <li class="nav-item"><button class="btn btn-header hielo" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/ice')" id="hielo">Hielo</button></li>
+                <li class="nav-item"><button class="btn btn-header lucha" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/fighting')" id="lucha">Lucha</button></li>
+                <li class="nav-item"><button class="btn btn-header veneno" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/poison')" id="veneno">Veneno</button></li>
+                <li class="nav-item"><button class="btn btn-header tierra" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/ground')" id="tierra">Tierra</button></li>
+                <li class="nav-item"><button class="btn btn-header volador" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/flying')" id="volador">Volador</button></li>
+                <li class="nav-item"><button class="btn btn-header psiquico" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/psychic')" id="psiquico">Psíquico</button></li>
+                <li class="nav-item"><button class="btn btn-header bicho" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/bug')" id="bicho">Bicho</button></li>
+                <li class="nav-item"><button class="btn btn-header roca" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/rock')" id="roca">Roca</button></li>
+                <li class="nav-item"><button class="btn btn-header fantasma" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/ghost')" id="fantasma">Fantasma</button></li>
+                <li class="nav-item"><button class="btn btn-header siniestro" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/dark')" id="siniestro">Siniestro</button></li>
+                <li class="nav-item"><button class="btn btn-header dragon" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/dragon')" id="dragon">Dragón</button></li>
+                <li class="nav-item"><button class="btn btn-header acero" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/steel')" id="acero">Acero</button></li>
+                <li class="nav-item"><button class="btn btn-header hada" onclick="traerPokemonesPorTipo('https://pokeapi.co/api/v2/type/fairy')" id="hada">Hada</button></li>
             </ul>
         </nav>
     </header>
@@ -51,7 +44,8 @@
     <main>
 
         <div id="todos">
-            <div class="pokemonTodos" id="listaPkmn">
+            <div class="pokemonTodos" id="listaPkmn"></div>
+            <div id="paginacion" style="display: flex; justify-content: space-between; margin-top: 10px;">
             </div>
         </div>
 

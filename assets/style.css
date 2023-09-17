@@ -5,7 +5,7 @@
     --clr-gray: #ececec;
     --clr-white: #f7f7f7;
 
-    --type-normal: #A8A878;
+    --type-normal: #b0a8a8;
     --type-fire: #F08030;
     --type-water: #6890F0;
     --type-grass: #78C850;
@@ -41,6 +41,13 @@ button {
     background-color: transparent;
     border: 0;
     border-radius: 0;
+}
+
+.navbar>.container-fluid {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Aquí todo el CSS extra */
@@ -110,6 +117,10 @@ main {
     .pokemonTodos {
         grid-template-columns: 1fr 1fr 1fr;
     }
+}
+
+p {
+    margin-bottom: 0;
 }
 
 .pokemon {
@@ -183,6 +194,19 @@ main {
     justify-content: center;
 }
 
+.pkmnAbility {
+    display: flex;
+    gap: .7rem;
+    font-size: .75rem;
+    font-weight: 500;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--clr-gray);
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+    cursor: pointer;
+}
+
 .type {
     padding: .25rem .5rem;
     border-radius: 100vmax;
@@ -198,6 +222,7 @@ main {
     background-color: var(--clr-gray);
     padding: .25rem .5rem;
     border-radius: 100vmax;
+    cursor: pointer;
 }
 
 /* Aquí comienzan los colores de botones según tipo */
